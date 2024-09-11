@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
 public:
-
+ 
     string palindrome(string s ,int l,int r)
     {
         while(l >= 0 && r < s.size()
