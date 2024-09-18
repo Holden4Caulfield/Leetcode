@@ -1,4 +1,4 @@
-/*
+    /*
  * @lc app=leetcode.cn id=26 lang=cpp
  *
  * [26] 删除有序数组中的重复项
