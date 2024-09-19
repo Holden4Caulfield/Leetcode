@@ -17,8 +17,25 @@
  */
 class Solution {
 public:
-    ListNode* deleteDuplicates(ListNode* head) {
-        if(head == nullptr)return nullptr;
+    ListNode * trave(ListNode * head)
+    {
+        ListNode * dummy = new ListNode(-1);
+        dummy->next = head;
+        ListNode * cur = head;
+        while(cur->next)
+        {
+            if(cur->next->val == cur->val)
+            {
+                cur->next = cur->next->next;
+            }
+            else
+                cur = cur->next;
+        }
+        return dummy->next;
+    }
+
+    ListNode * fastslow(ListNode * head)
+    {
         ListNode *p1 = head,*p2=head;
         while(p2)
         {
@@ -31,6 +48,11 @@ public:
         }
         p1->next=nullptr;
         return head;
+    }
+
+    ListNode* deleteDuplicates(ListNode* head) {
+        if(head == nullptr)return nullptr;
+        return trave(head);
     }
 };
 // @lc code=end
