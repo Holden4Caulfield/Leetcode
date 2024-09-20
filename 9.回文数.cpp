@@ -14,7 +14,7 @@ public:
         while(x > 0 )
         {
             stack_in.push(x%10);
-            x = x/10;
+            x = x/10; 
             cnt ++;
         }
         int pop_cnt = cnt /2;
